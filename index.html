@@ -33,6 +33,12 @@
             map: map,
             title:'First Fecking Marker!'
         });
+        var infowindow = new google.maps.InfoWindow({
+            content:'First Fecking content!'
+        });
+        marker.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlvokhg0ZQ4qaYlZ5sQL3Ts9ScyhWZqzo&v=3&callback=initMap">
